@@ -1,0 +1,15 @@
+{
+  "name": "file-explorer-visualizer",
+  "version": "1.0.0",
+  "description": "A local file system explorer that visualizes disk usage as a colorful hierarchical tree.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["file explorer", "disk usage", "tree view", "nodejs", "express"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.4"
+  }
+}

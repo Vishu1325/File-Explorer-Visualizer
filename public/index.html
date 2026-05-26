@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Explorer Visualizer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <div>
+          <h1>File Explorer Visualizer</h1>
+          <p>Browse folders, inspect disk usage, and open items in Windows Explorer.</p>
+        </div>
+        <div class="path-bar">
+          <input id="pathInput" type="text" placeholder="Enter a folder path or leave blank for Home" />
+          <button id="loadButton">Load</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="overview-panel">
+          <div class="overview-card">
+            <span id="rootName">Root:</span>
+            <strong id="rootPath">Loading...</strong>
+          </div>
+          <div class="overview-card">
+            <span>Total size</span>
+            <strong id="totalSize">—</strong>
+          </div>
+          <div class="overview-card">
+            <span>Loaded items</span>
+            <strong id="itemCount">—</strong>
+          </div>
+        </section>
+
+        <section class="tree-panel" id="treePanel">
+          <div class="tree-toolbar">
+            <span>Click a node to reveal it in File Explorer.</span>
+            <select id="depthSelect">
+              <option value="0">Current folder only</option>
+              <option value="1" selected>One level</option>
+              <option value="2">Two levels</option>
+            </select>
+          </div>
+          <div id="treeContainer" class="tree-container">Loading folder data…</div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
